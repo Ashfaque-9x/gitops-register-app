@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: complete-prodcution-e2e-deployment
+  name: register-app-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: complete-prodcution-e2e-app
+      app: register-app
   template:
     metadata:
       labels:
-        app: complete-prodcution-e2e-app
+        app: register-app
     spec:
       containers:
-        - name: complete-prodcution-e2e-app
-          image: dmancloud/complete-prodcution-e2e-pipeline:1.0.0-36
+        - name: register-app
+          image: ashfaque9x/register-app:1.0.0-5
           resources:
             limits:
               memory: "256Mi"

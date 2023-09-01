@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: complete-prodcution-e2e-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: complete-prodcution-e2e-app
+  template:
+    metadata:
+      labels:
+        app: complete-prodcution-e2e-app
+    spec:
+      containers:
+        - name: complete-prodcution-e2e-app
+          image: dmancloud/complete-prodcution-e2e-pipeline:1.0.0-36
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080

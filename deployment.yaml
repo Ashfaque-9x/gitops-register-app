@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: register-app:1.0.0-15
+  name: register-app-Deployment
 spec:
   replicas: 2
   selector:

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: register-app
-          image: shan123456/java:1.0.0-39
+          image: shan123456/java:1.0.0-41
           resources:
             limits:
               memory: "256Mi"
